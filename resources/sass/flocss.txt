@@ -1,0 +1,4 @@
+・projectレイヤーには複数回使いまわすものをつける
+・複数のcomponentで構成されるものはprojectにすること
+・componentは最小単位なので、複数のcomponentを持ってはいけない
+・ネストは３階層まで　

@@ -1,0 +1,49 @@
+// ==================================
+// menu
+// ==================================
+.c-nav{
+
+    ul{
+        font-size: $font-size-l;
+        display: flex;
+
+        li{
+            cursor: pointer;
+            margin: 0 2%;
+        }
+    }
+    @include mq(){
+        display: none;
+    }
+}
+
+
+
+
+// ==================================
+// ハンバーガーmenu
+// ==================================
+.c-hamburger{
+    width: 40px;
+    height: 40px;
+    display: none;
+    position: relative;
+
+    @include mq(){
+        display: inline-block;
+    }
+
+   span{
+    width: 100%;
+    height: 5px;
+    background: white;
+
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+
+    &:nth-of-type(1){
+        top: 0;
+    }
+  }
+}

@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*========================================
+設定
+========================================*/
+
+/*========================================
+mixinを設定
+@include 関数名()で使えるようになる
+========================================*/
+
+/*========================================
+base   デフォルト設定
+========================================*/
+
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  text-decoration: none;
+  color: black;
+}
+
+.p-header {
+  color: white;
+  background: #333;
+  font-size: 24px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  .p-header {
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+}
+
+.p-header h1 {
+  font-family: "Notable", sans-serif;
+  margin: 0 5%;
+}
+
+.p-header__nav ul {
+  font-size: 20px;
+  display: flex;
+}
+
+.p-header__nav ul li {
+  cursor: pointer;
+  margin: 0 2%;
+}
+
+@media screen and (max-width: 414px) {
+  .p-header__nav {
+    display: none;
+  }
+}
+
+.c-nav ul {
+  font-size: 20px;
+  display: flex;
+}
+
+.c-nav ul li {
+  cursor: pointer;
+  margin: 0 2%;
+}
+
+@media screen and (max-width: 414px) {
+  .c-nav {
+    display: none;
+  }
+}
+
+.c-hamburger {
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 414px) {
+  .c-hamburger {
+    display: inline-block;
+  }
+}
+
+.c-hamburger span {
+  width: 100%;
+  height: 5px;
+  background: white;
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.c-hamburger span:nth-of-type(1) {
+  top: 0;
+}
+
