@@ -28,22 +28,6 @@
         font-family: 'Notable', sans-serif;
         margin:0 5%;
     }
-
-    &__nav{
-
-        ul{
-            font-size: $font-size-l;
-            display: flex;
-
-            li{
-                cursor: pointer;
-                margin: 0 2%;
-            }
-        }
-        @include mq(){
-            display: none;
-        }
-    }
 }
 
 

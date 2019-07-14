@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Log;
+
+
+Log::debug('HomeController: homeコントローラーです');
 
 class HomeController extends Controller
 {
@@ -23,6 +27,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('/top/top');//logoutさせたらtop(mypage)にリダイレクト
     }
 }

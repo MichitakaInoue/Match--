@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Route;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +15,11 @@
 |
 */
 
+Log::debug('Routing: ルーティングです');
+
+
 Route::get('/', function () {
-    return view('child');
+    return view('top/top');
 });
 
 
@@ -26,13 +33,17 @@ Route::get('/sample', function(){
 Route::get('/top', function(){
     return view('top/top');
 });
+
+
+
+
+
 Auth::routes();
 
 
-//ログイン
-Route::get('/login', function(){
-    return view('auth/login');
-});
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('top'); //ログアウトしたら　ビューはtopのものを使い回す
+
+
+

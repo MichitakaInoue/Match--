@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Log;
+
+Log::debug('LoginController: ログイン,ログアウトコントローラーです');
 
 class LoginController extends Controller
 {
@@ -35,5 +38,10 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function __redirect(){
+        Log::debug('LoginController: マイページ(top）にリダイレクトさせます'); //todo
+        return redirect('/top')->with('flash_message', __('ログインしました!'));
     }
 }

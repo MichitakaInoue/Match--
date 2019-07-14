@@ -193,24 +193,8 @@ body {
   margin: 0 5%;
 }
 
-.p-header__nav ul {
-  font-size: 20px;
-  display: flex;
-}
-
-.p-header__nav ul li {
-  cursor: pointer;
-  margin: 0 2%;
-}
-
-@media screen and (max-width: 414px) {
-  .p-header__nav {
-    display: none;
-  }
-}
-
 .c-nav ul {
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
 }
 
@@ -227,7 +211,7 @@ body {
 
 .c-hamburger {
   width: 40px;
-  height: 40px;
+  height: 35px;
   display: none;
   position: relative;
 }
@@ -249,5 +233,13 @@ body {
 
 .c-hamburger span:nth-of-type(1) {
   top: 0;
+}
+
+.c-hamburger span:nth-of-type(2) {
+  top: 15px;
+}
+
+.c-hamburger span:nth-of-type(3) {
+  bottom: 0;
 }
 

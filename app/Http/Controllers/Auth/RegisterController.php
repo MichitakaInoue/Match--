@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Log;
+
+Log::debug('RegisterController: レジスターコントローラーです');
 
 class RegisterController extends Controller
 {
