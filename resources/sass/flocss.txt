@@ -1,0 +1,29 @@
+・projectレイヤーには複数回使いまわすものをつける
+・複数のcomponentで構成されるものはprojectにすること
+・componentは最小単位なので、複数のcomponentを持ってはいけない
+・ネストは３階層まで　
+
+
+・foundation 基本的にコードは記述しない
+
+
+
+・layout パーツの配置やラッパーのとしての幅や高さを決定するクラス
+    l- をつける　layout.scssに記述
+        objectの配置を決める
+        ページ単位の唯一の存在なのでidセレクタを使う
+        idでfooter header sidebarについて
+
+
+・componentは再利用可能なパーツ 最低限の機能単位で分割したモジュール
+　　c-btnとか
+
+
+・projectはcomponentにするほどでもないパーツ
+
+
+・utilityはcomponentやprojectレイヤで解決することが難しい
+　僅かなスタイル調整のための便利クラス
+　極力使わないこと
+
+

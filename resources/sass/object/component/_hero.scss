@@ -1,0 +1,11 @@
+.c-hero{
+   width: 100%;
+   height: 200px;
+   background:  linear-gradient(45deg, #5761b4 0%, #c142a0 100%);
+
+   @include mq(){
+       width: 120%;
+       height: 150px;
+
+   }
+}

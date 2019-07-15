@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*========================================
+設定
+========================================*/
+
+/*========================================
+mixinを設定
+@include 関数名()で使えるようになる
+========================================*/
+
+/*========================================
+base   デフォルト設定
+========================================*/
+
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
+  justify-content: center;
+  align-items: center;
+  background: #EEEEEE;
+}
+
+.item {
+  text-decoration: none;
+  color: black;
+}
+
+#l-header {
+  color: white;
+  background: #333;
+  font-size: 24px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  #l-header {
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+}
+
+#l-header h1 {
+  font-family: "Notable", sans-serif;
+  margin: 0 5%;
+}
+
+#l-main {
+  width: 100%;
+  position: relative;
+}
+
+.c-nav ul {
+  font-size: 18px;
+  display: flex;
+}
+
+.c-nav ul li {
+  cursor: pointer;
+  margin: 0 5%;
+}
+
+.c-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 414px) {
+  .c-nav {
+    display: none;
+  }
+}
+
+.c-hamburger {
+  width: 40px;
+  height: 35px;
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 414px) {
+  .c-hamburger {
+    display: inline-block;
+  }
+}
+
+.c-hamburger span {
+  width: 100%;
+  height: 5px;
+  background: white;
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.c-hamburger span:nth-of-type(1) {
+  top: 0;
+}
+
+.c-hamburger span:nth-of-type(2) {
+  top: 15px;
+}
+
+.c-hamburger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.c-hero {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(45deg, #5761b4 0%, #c142a0 100%);
+}
+
+@media screen and (max-width: 414px) {
+  .c-hero {
+    width: 120%;
+    height: 150px;
+  }
+}
+
+.c-form {
+  width: 100%;
+  height: 100%;
+}
+
+.p-jobForm {
+  width: 70%;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 100px 50px;
+  margin: auto auto 100px auto;
+}
+
