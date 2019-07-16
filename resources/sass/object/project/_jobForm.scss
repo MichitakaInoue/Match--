@@ -9,4 +9,7 @@
     box-sizing: border-box;
     padding: 100px 50px;
     margin: auto auto 100px auto;
+    @include mq(){
+        width: 90%;
+    }
 }

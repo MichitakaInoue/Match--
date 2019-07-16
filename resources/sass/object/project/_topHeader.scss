@@ -1,0 +1,31 @@
+.p-topHeader{
+    width: 100%;
+    height: 60px;
+    background: #6666CC;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 60px;
+
+    @include mq(){
+        box-sizing: border-box;
+        padding: 0 30px;
+    }
+
+    &__nav{
+        align-items: center;
+        ul{
+            font-size: $font-size-m;
+            display: flex;
+    
+            li{
+                cursor: pointer;
+                margin: 0 5%;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}

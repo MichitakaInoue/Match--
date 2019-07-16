@@ -31,10 +31,9 @@
 
 <body>
     <header id="l-header">
-        <h1>Match</h1>
+        <h1><a href="route{{'top'}}">Match</a></h1>
         <nav class=c-nav>
             <ul>
-                <li><a href="">top</a></li> 
                 <li><a href="route{{'mypage'}}">mypage</a></li>   
                 <li><a href="">account</a></li>   
                 <li><a href="route{{'post'}}">post</a></li>

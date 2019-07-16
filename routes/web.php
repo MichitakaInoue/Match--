@@ -29,11 +29,11 @@ Route::get('/sample', function(){
 });
 
 
-//モック　top
-Route::get('/top', function(){
-    return view('top/top');
-});
 
+//トップページリンク
+Route::get('/routetop', function(){
+    return view('/Match/top');
+});
 
 
 //mypageリンク

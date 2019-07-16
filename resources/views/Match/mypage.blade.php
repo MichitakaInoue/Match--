@@ -12,5 +12,13 @@
 
 
 @section('content')
-    <h1>マイページです</h1>    
+    <section class="c-hero">
+        <div>
+            <a class="p-profileImg" href=""><img src="" alt=""></a>
+        </div>
+        <div><h4>michitaka</h4></div>           
+    </section> 
+    <section class="p-mypage">
+        <div class="p-mypage__"></div>
+    </section>
 @endsection
