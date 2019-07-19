@@ -23,8 +23,8 @@
             </div>
             <input style="width: 100%; height:50px; margin-bottom:20px;" type="text" placeholder="金額">
             <input style="width: 100%; height:50px; margin-bottom:20px;" type="text" placeholder="説明">
-            <input style="width: 100%; height:50px; margin-bottom:20px;" type="text" placeholder="">
-            <input style="width: 100%; height:50px; margin-bottom:20px;" type="text" placeholder="">
+            <input style="width: 100%; height:50px; margin-bottom:20px;" type="text" placeholder="コメント">
+            <input style="width: 100%; height:50px; margin-bottom:20px;" type="text" placeholder="カテゴリ">
             <button>投稿する</button>
         </form>
     </section>

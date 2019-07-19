@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('category', function (Blueprint $table) {
             $table->bigIncrements('id')->nullable(false);
             $table->string('name')->nullable(false);
-            $table->string('email')->unique()->nullable(false);
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');            $table->collation = 'utf8mb4_bin';
-            $table->string('comment');
-            $table->string('pic');
-            $table->boolean('delte_flg')->default(false);
-            $table->datetime('create_date')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->boolean('delete_flg')->default(false);
+            $table->datetime('create_date')->default(DB::raw('CURRENT_TIMESTAMP'));;
             $table->timestamp('update_date')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->rememberToken();
+            $table->timestamps();
             $table->collation = 'utf8mb4_bin';
         });
     }
@@ -36,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('category');
     }
 }

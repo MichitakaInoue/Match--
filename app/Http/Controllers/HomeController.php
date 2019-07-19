@@ -27,6 +27,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('/top/top');//logoutさせたらtop(mypage)にリダイレクト
+        return view('/Match/top');//logoutさせたらtop(mypage)にリダイレクト
     }
 }

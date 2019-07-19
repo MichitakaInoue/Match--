@@ -19,7 +19,7 @@ Log::debug('Routing: ルーティングです');
 
 
 Route::get('/', function () {
-    return view('top/top');
+    return view('Match/top');
 });
 
 
