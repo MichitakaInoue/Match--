@@ -22,8 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('comment');
             $table->string('pic');
             $table->boolean('delte_flg')->default(false);
-            $table->datetime('create_date')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('update_date')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamps();
             $table->rememberToken();
             $table->collation = 'utf8mb4_bin';
         });

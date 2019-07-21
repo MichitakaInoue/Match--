@@ -15,14 +15,13 @@ class CreateBillsTable extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->bigIncrements('id')->nullable(false);
-            $table->string('name')->nullable(false);
+            $table->string('title')->nullable(false);
             $table->Integer('price')->nullable(false);
-            $table->string('bull_content');
+            $table->string('bill_content');
             $table->string('bill_comment');
             $table->Integer('category_id');
             $table->boolean('delte_flg');
-            $table->datetime('create_date')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('update_date')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamps();
             $table->collation = 'utf8mb4_bin';
         });
     }

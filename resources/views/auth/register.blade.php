@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@php
+    Log::debug('register: ユーザー登録のビューです');
+@endphp
 
 
 @section('content')

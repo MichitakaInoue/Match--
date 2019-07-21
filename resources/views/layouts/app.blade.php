@@ -34,8 +34,10 @@
         <h1><a href="route{{'top'}}">Match</a></h1>
         <nav class=c-nav>
             <ul>
-                <li><a href="route{{'mypage'}}">mypage</a></li>   
-                <li><a href="">account</a></li>   
+                <li><a href="route{{'mypage'}}">mypage</a></li>  
+                @auth
+                <li><a href="route{{'account'}}">account</a></li>   
+                @endauth 
                 <li><a href="route{{'post'}}">post</a></li>
                 <li><a href="route{{'index'}}">jobs</a></li>         
                 @guest

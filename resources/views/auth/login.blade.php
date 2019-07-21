@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 
+@php
+    Log::debug('login: ログインのビューです');
+@endphp
+
 
 @section('content')
 <div class="container">

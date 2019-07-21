@@ -42,6 +42,6 @@ class LoginController extends Controller
 
     public function __redirect(){
         Log::debug('LoginController: マイページ(top）にリダイレクトさせます'); //todo
-        return redirect('/top')->with('flash_message', __('ログインしました!'));
+        return redirect('/')->with('flash_message', __('ログインしました!'));
     }
 }

@@ -46,6 +46,27 @@ Route::get('/routepost', function(){
     return view('Match/post');
 });
 
+//アカウンﾄ登録リンク
+Route::get('/routeaccount', function(){
+    return view('Match/account');
+});
+Route::get('/routeaccount', 'MatchsController@showAccount');//todo
+
+
+
+
+
+//案件投稿ルーティング
+Route::post('/routepost', 'MatchsController@bills')->name('Matchs.bills');
+
+//アカウント作成ルーティング
+Route::post('/routeaccount', 'MatchsController@account')->name('Matchs.account');
+
+
+
+
+
+
 
 
 Auth::routes();
