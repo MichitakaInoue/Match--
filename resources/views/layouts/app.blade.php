@@ -34,11 +34,11 @@
         <h1><a href="route{{'top'}}">Match</a></h1>
         <nav class=c-nav>
             <ul>
-                <li><a href="route{{'mypage'}}">mypage</a></li>  
                 @auth
+                <li><a href="route{{'mypage'}}">mypage</a></li>  
                 <li><a href="route{{'account'}}">account</a></li>   
-                @endauth 
                 <li><a href="route{{'post'}}">post</a></li>
+                @endauth 
                 <li><a href="route{{'index'}}">jobs</a></li>         
                 @guest
                     <li><a  href="{{ route('login') }}">signin</a></li>
@@ -56,6 +56,9 @@
                             @csrf
                         </form>
                 @endguest
+                @auth
+                <li><a href="">exit</a></li>
+                @endauth
             </ul>
         </nav>
         <div class="c-hamburger">
@@ -68,9 +71,9 @@
 
 
 
-    <main id="l-main">
+    <div id="l-main">
         @yield('content')
-    </main>
+    </div>
 
 
 

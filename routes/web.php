@@ -50,7 +50,14 @@ Route::get('/routepost', function(){
 Route::get('/routeaccount', function(){
     return view('Match/account');
 });
+//カウント情報取得アクションルーティング
 Route::get('/routeaccount', 'MatchsController@showAccount');//todo
+
+
+//案件一覧表示ルーティング
+Route::get('/routeindex', function(){
+    return view('Match/index');
+});
 
 
 

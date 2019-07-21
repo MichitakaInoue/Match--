@@ -288,6 +288,28 @@ body {
   padding: 30px;
 }
 
+.c-index__one,
+.c-new__one {
+  width: 100%;
+}
+
+.c-index__one--img,
+.c-new__one--img {
+  height: 70%;
+  background: gray;
+}
+
+.c-index__one--middle,
+.c-new__one--middle {
+  height: 17%;
+  background: white;
+}
+
+.c-index__one--bottom,
+.c-new__one--bottom {
+  height: 13%;
+}
+
 .c-newOne {
   width: 30%;
   height: 240px;
@@ -303,16 +325,78 @@ body {
   }
 }
 
-.c-newOne__head {
+.c-newOne__head,
+.c-newOne .c-index__one--head {
   width: 100%;
   height: 20%;
-  background: gray;
+  background: black;
 }
 
 .c-newOne__body {
   width: 100%;
   height: 80%;
   background: skyblue;
+}
+
+.c-article__block {
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+  margin-bottom: 70px;
+}
+
+.c-article__block h3 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.c-article__block--title {
+  border: none;
+}
+
+.c-article__block--title p {
+  font-size: 14px;
+  color: #444444;
+}
+
+.c-article__profile {
+  overflow: hidden;
+}
+
+.c-article__profile--name {
+  width: 100%;
+  height: 40px;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  line-height: 40px;
+  background: #EEEEEE;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.c-article__profile--name h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.c-article__profile--left {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0 0 0;
+  float: left;
+}
+
+.c-article__profile--left a {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+  display: inline-block;
+  background: skyblue;
+}
+
+.c-article__profile--right {
+  float: left;
+  margin: 40px;
 }
 
 .p-jobForm {
@@ -357,11 +441,24 @@ body {
 }
 
 .p-mypage {
-  width: 100%;
-  height: 100%;
+  display: flex;
+}
+
+.p-mypage__main {
+  width: 70%;
+  height: 800px;
   box-sizing: border-box;
-  padding: 30px;
-  border: 1px solid;
+  padding: 70px;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  background: white;
+  margin: 0 0 0 10%;
+}
+
+.p-mypage__sidebar {
+  width: 25%;
+  height: 800px;
+  box-sizing: border-box;
+  padding: 40px;
 }
 
 .p-topHeader {
@@ -398,5 +495,46 @@ body {
 .p-topHeader__nav ul li a {
   text-decoration: none;
   color: white;
+}
+
+.p-indexHeader {
+  width: 100%;
+  height: 40px;
+  background: #66CC99;
+  line-height: 40px;
+}
+
+.p-bills {
+  height: 700px;
+}
+
+.p-bill {
+  width: 90%;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.p-bill__one {
+  border: 1px solid;
+  float: left;
+}
+
+.p-bill__small {
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.p-bill__large--one {
+  width: 30%;
+  height: 370px;
+  margin: 0 15px;
+}
+
+.p-bill__small--one {
+  width: 22%;
+  height: 270px;
+  margin: 0 14px;
 }
 

@@ -27,8 +27,8 @@
 
     <section class="c-index c-new">
         <div class="c-newOne">
-            <div class="c-newOne__head"></div>
-            <div class="c-newOne__body"></div>
+            <div class="c-newOne__head  c-index__one--head"></div>
+            <div class="c-newOne__body  c-index__one--body"></div>
         </div>
         <div class="c-newOne">
             <div class="c-newOne__head"></div>

@@ -1,0 +1,33 @@
+.p-bills{
+    // width: 90%;
+    height: 700px;//todo
+    // margin: auto;
+    // box-sizing: border-box;
+    // padding: 30px 0;
+    // overflow: hidden;
+}
+.p-bill{
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 30px 0;
+    overflow: hidden;
+   &__one{
+    border: 1px solid;
+    float: left;
+   }
+}
+.p-bill__small{
+    padding:0;
+    margin-bottom: 40px;
+}
+.p-bill__large--one{
+    width: 30%;
+    height: 370px;
+    margin: 0 15px;
+}
+.p-bill__small--one{
+    width: 22%;
+    height: 270px;
+    margin: 0 14px;
+}
