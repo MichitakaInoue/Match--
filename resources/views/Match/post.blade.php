@@ -15,7 +15,7 @@
     <section class="c-hero">
     </section>
     <section class="p-jobForm">
-        <form class="c-form" method="POST" action="{{route('Matchs.bills')}}">
+        <form class="c-form" method="POST" action="{{route('Bills.bills')}}">
             @csrf
             <div class="">
                 <input style="width: 100%; height:50px; margin-bottom:20px;" name="title" value="{{old('title')}}" type="text" placeholder="タイトル">

@@ -16,36 +16,20 @@
     <section class="c-hero">
     </section>
     <section class="p-jobForm">
-        <form class="c-form" method="POST" action="{{route('Matchs.account')}}">
+        <form class="c-form" method="POST" action="{{route('Accounts.account')}}">
             @csrf
             <div class="">
-                <input style="width: 100%; height:50px; margin-bottom:20px;"  value="{{$user->name}}" type="text" placeholder="登録する名前">
-                @error('')
+                <input style="width: 100%; height:50px; margin-bottom:20px;" name="name"  value="{{$dbName}}" type="text" placeholder="あなたの名前">
+                @error('name')
                 <!-- $messageと書いておくだけで、自動的にlaravelからエラーがあっったら自動的にメッセージを入れてくれる -->
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
-            <div class="">
-                <input style="width: 100%; height:50px; margin-bottom:20px;" name="name"  value="{{old('name')}}" type="text" placeholder="新しい名前">
-                @error('user_name')
-                <!-- $messageと書いておくだけで、自動的にlaravelからエラーがあっったら自動的にメッセージを入れてくれる -->
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
+           
 
-
-            <input style="width: 100%; height:50px; margin-bottom:20px;"  value="{{$user->email}}"  type="text" placeholder="メールアドレス">
-                @error('')
-                <!-- $messageと書いておくだけで、自動的にlaravelからエラーがあっったら自動的にメッセージを入れてくれる -->
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            <input style="width: 100%; height:50px; margin-bottom:20px;" name="email"  value="{{old('email')}}"  type="text" placeholder="新しいメールアドレス">
+            <input style="width: 100%; height:50px; margin-bottom:20px;" name="email"  value="{{$dbEmail}}"  type="text" placeholder="あなたのメールアドレス">
                 @error('email')
                 <!-- $messageと書いておくだけで、自動的にlaravelからエラーがあっったら自動的にメッセージを入れてくれる -->
                 <span class="invalid-feedback" role="alert">
@@ -54,9 +38,8 @@
                 @enderror
 
 
-
-            <input style="width: 100%; height:50px; margin-bottom:20px;" name="comment"  value="{{old('comment')}}" type="text" placeholder="一言">
-                @error('content')
+            <input style="width: 100%; height:50px; margin-bottom:20px;" name="comment"  value="{{$dbComment}}" type="text" placeholder="一言">
+                @error('comment')
                 <!-- $messageと書いておくだけで、自動的にlaravelからエラーがあっったら自動的にメッセージを入れてくれる -->
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

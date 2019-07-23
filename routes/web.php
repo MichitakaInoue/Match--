@@ -51,7 +51,7 @@ Route::get('/routeaccount', function(){
     return view('Match/account');
 });
 //カウント情報取得アクションルーティング
-Route::get('/routeaccount', 'MatchsController@showAccount');//todo
+Route::get('/routeaccount', 'showAccountsController@showAccount');
 
 
 //案件一覧表示ルーティング
@@ -64,10 +64,10 @@ Route::get('/routeindex', function(){
 
 
 //案件投稿ルーティング
-Route::post('/routepost', 'MatchsController@bills')->name('Matchs.bills');
+Route::post('/routepost', 'BillsController@bills')->name('Bills.bills');
 
 //アカウント作成ルーティング
-Route::post('/routeaccount', 'MatchsController@account')->name('Matchs.account');
+Route::post('/routeaccount', 'AccountsController@account')->name('Accounts.account');
 
 
 
