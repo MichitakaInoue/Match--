@@ -29,7 +29,7 @@
            <section class="p-bill__one p-bill__large--one">
              <div class="c-index">
                <div class="c-index__main">
-                 <a href=""><img class="c-index__main--img" src="{{ asset('/img/images.jpeg') }}" alt=""></a>
+                 <a href=""><img class="c-index__main--img" src="{{ asset('') }}" alt=""></a>
                  <p  class="c-index__main--detail">wwwwwwwwwwwwwww</p>
             　 </div>
                <div class="c-index__price"></div>

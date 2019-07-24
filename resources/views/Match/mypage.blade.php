@@ -20,8 +20,12 @@
         </div>
         <div class="c-article__block  c-article__profile">
             <div class="c-article__profile--name"><h2>inoue michitka</h2></div>
-            <div><a href=""><img class="c-article__profile--left" src="{{asset('/storage/img/'.$user->pic)}}" class="u-img u-img__article" alt=""></a></div>
-            <div class="c-article__profile--right"><p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p></div>
+            @if ($user->pic == '')
+                <div><a href=""><img class="c-article__profile--left" src="{{asset('/images/noimages.png')}}" class="u-img u-img__article" alt=""></a></div>
+            @else
+                <div><a href=""><img class="c-article__profile--left" src="{{asset('/storage/img/'.$user->pic)}}" class="u-img u-img__article" alt=""></a></div>
+            @endif
+            <div class="c-article__profile--right"><p>{{$user->comment}}</p></div>
         </div>
         <div class="c-article__block  c-article__block--title">
             <h3>最近のメッセージ</h3>

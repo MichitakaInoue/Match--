@@ -22,14 +22,16 @@ class AccountsController extends Controller
         $dbName = $user['name'];//最初に登録したname
         $dbEmail = $user['email'];//最初に登録したemail
         $dbComment = $user['comment'];
+        $dbPic = $user['pic'];
         $filePath = '';//画像保存のためのファイルパス格納　str型が入る
     
-        Log::debug('AccountsController: アカウント更新、リクエスト(post)の内容(新しいname): '.print_r($postName, true));
-        Log::debug('AccountsController: アカウント更新、リクエスト(post)の内容(新しいemail): '.print_r($postEmail, true));
-        Log::debug('AccountsController: アカウント更新、リクエスト(post)の内容(新しいpic): '.print_r($postPic, true));
-        Log::debug('AccountsController: アカウント更新、リクエスト(post)の内容(新しいemail): '.print_r($postEmail, true));
-        Log::debug('AccountsController: アカウント更新、DBに保存しているname: '.print_r($dbName, true));
-        Log::debug('AccountsController: アカウント更新、DBに保存しているEmail: '.print_r($dbEmail, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、リクエスト(post)の内容(新しいname): '.print_r($postName, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、リクエスト(post)の内容(新しいemail): '.print_r($postEmail, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、リクエスト(post)の内容(新しいpic): '.print_r($postPic, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、リクエスト(post)の内容(新しいemail): '.print_r($postEmail, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、DBに保存しているname: '.print_r($dbName, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、DBに保存しているEmail: '.print_r($dbEmail, true));
+        Log::debug('AccountsController: アカウント更新コントローラー、DBに保存しているpic: '.print_r($dbPic, true));
         
         Log::debug('AccountsController: バリデーションします');
 
@@ -44,25 +46,16 @@ class AccountsController extends Controller
         //https://promidea.co.jp/archives/2377 参照
         
         Log::debug('postしたファイル：'.print_r($request->file('pic'), true));
-        $filePath = $request->file('pic')->store('public/img');//sotreでpublic/img配下に保存する
+        if(!($postPic == '')){
+            $filePath = $request->file('pic')->store('public/img');//sotreでpublic/img配下に保存する
+        }else{
+            Log::debug('画像はpostされていません');
+            $filePath = $dbPic;
+        }
         Log::debug('ファイルパス：'.print_r($filePath, true));
-        
-        // User::create(['pic'=> basename($filePath)]);//これでは別でカラムが作られるだけ
 
         $user->pic = basename($filePath);
         Log::debug('picカラム：'.print_r($user->pic, true));
-
-
-        // $filePath = $postPic->store('public');//storage/app/publicに保存させる
-        // $newFilePath = str_replace('public/', '', $filePath);
-        // $user->pic = str_replace('public/', '', $filePath);
-
-
-        // Log::debug('ファイルパス: '.print_r($filePath, true));//public/TAO3SwhY3URRDv37UUc49daLCYSB0xbmXPruhary.jpeg 
-        // Log::debug('str_replaceしたやつ：'.print_r($user->pic, true));//TAO3SwhY3URRDv37UUc49daLCYSB0xbmXPruhary.jpeg  
-        // Log::debug('tmpファイル：'.print_r($postPic['pathName'], true));
-        
-        //一つ一つ入れていく　picがtmpに保存されるので
 
         $user->name = $request->name;
         $user->email = $request->email;
@@ -72,10 +65,9 @@ class AccountsController extends Controller
 
         Log::debug('saveしたあとの$user:'.print_r($user, true));//確認
 
-        // $user->fill($request->all())->save(); 一気に入れる
+        // $user->fill($request->all())->save(); 一気に入れる場合
         
         Log::debug('AccountsController: DBに挿入完了しました。マイページにリダイレクトさせます');
         return view('Match.mypage', ['user'=>$user]);
-        // return view('Match.mypage', ['newFilePath'=>$newFilePath]);
       }
 }
