@@ -16,14 +16,11 @@ class showAccountsController extends Controller
       $dbName = $user['name'];//最初に登録したname
       $dbEmail = $user['email'];//最初に登録したemail
       $dbComment = $user['comment'];
+      $dbPic = $user->pic;
 
-        // $user = Auth::user()->get();
-        // Log::debug('showAccountsController: 今ログインしているユーザーの情報について'.print_r($user, true));
-      
-        // Log::debug('showAccountsController: 取得しているユーザー情報'.print_r($user, true));
-  
-        Log::debug('showAccountsController: あなたの名前(DB)'.print_r($dbName, true));
-        Log::debug('showAccountsController: あなたのemail(DB)'.print_r($dbEmail, true));
-        return view('Match.account', ['user'=>$user, 'dbName'=>$dbName, 'dbEmail'=>$dbEmail, 'dbComment'=>$dbComment]);//view側へ渡すデータ
-      }   
+      Log::debug('あなたの画像：'.print_r($dbPic, true));
+      Log::debug('showAccountsController: あなたの名前(DB)'.print_r($dbName, true));
+      Log::debug('showAccountsController: あなたのemail(DB)'.print_r($dbEmail, true));
+      return view('Match.account', ['user'=>$user, 'dbName'=>$dbName, 'dbEmail'=>$dbEmail, 'dbComment'=>$dbComment]);//view側へ渡すデータ
+    }   
 }

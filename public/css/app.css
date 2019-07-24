@@ -279,63 +279,52 @@ body {
   height: 100%;
 }
 
-.c-index,
-.c-new {
-  width: 100%;
-  height: 700px;
-  background: white;
-  box-sizing: border-box;
-  padding: 30px;
+.c-index {
+  height: 100%;
 }
 
-.c-index__one,
-.c-new__one {
-  width: 100%;
-}
-
-.c-index__one--img,
-.c-new__one--img {
+.c-index__main {
   height: 70%;
-  background: gray;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
 }
 
-.c-index__one--middle,
-.c-new__one--middle {
-  height: 17%;
-  background: white;
+.c-index__main--img {
+  width: 110px;
+  height: 110px;
+  display: block;
+  border-radius: 150px;
+  background: skyblue;
+  position: absolute;
+  top: 20%;
 }
 
-.c-index__one--bottom,
-.c-new__one--bottom {
-  height: 13%;
+.c-index__main--img img {
+  width: 100%;
+  height: 100%;
 }
 
-.c-newOne {
-  width: 30%;
-  height: 240px;
-  float: left;
-  margin: 30px 20px;
+.c-index__main--detail {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  display: block;
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 414px) {
-  .c-newOne {
-    width: 100%;
-    height: 150px;
-    margin: 0 0 50px 0;
+  .c-index__main--detail {
+    width: 50%;
   }
 }
 
-.c-newOne__head,
-.c-newOne .c-index__one--head {
-  width: 100%;
-  height: 20%;
-  background: black;
+.c-index__price {
+  height: 17%;
 }
 
-.c-newOne__body {
-  width: 100%;
-  height: 80%;
-  background: skyblue;
+.c-index__bottom {
+  height: 13%;
 }
 
 .c-article__block {
@@ -384,14 +373,7 @@ body {
   height: 150px;
   margin: 20px 0 0 0;
   float: left;
-}
-
-.c-article__profile--left a {
-  width: 100%;
-  height: 100%;
   border-radius: 150px;
-  display: inline-block;
-  background: skyblue;
 }
 
 .c-article__profile--right {
@@ -528,13 +510,27 @@ body {
 
 .p-bill__large--one {
   width: 30%;
-  height: 370px;
+  height: 300px;
   margin: 0 15px;
+}
+
+@media screen and (max-width: 414px) {
+  .p-bill__large--one {
+    width: 99%;
+    margin: 15px auto;
+  }
 }
 
 .p-bill__small--one {
   width: 22%;
-  height: 270px;
+  height: 240px;
   margin: 0 14px;
+}
+
+@media screen and (max-width: 414px) {
+  .p-bill__small--one {
+    width: 99%;
+    margin: 15px auto;
+  }
 }
 

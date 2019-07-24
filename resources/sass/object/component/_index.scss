@@ -1,47 +1,92 @@
-.c-index, .c-new{
-    width: 100%;
-    height: 700px;
-    background: white;
-    box-sizing: border-box;
-    padding: 30px;
-    &__one{
-        width: 100%;
-        &--img{
-            height: 70%;
-            background: gray;
-        }
-        &--middle{
-            height: 17%;
-            background: white;
-        }
-        &--bottom{
-            height: 13%;
-        }
-    }
+.c-index{
+    height: 100%;
+    &__main{
+       height: 70%;
+       box-sizing: border-box;
+       padding: 10px;
+       position: relative;
+       &--img{
+           width: 110px;
+           height: 110px;
+           display: block;
+           border-radius: 150px;
+           background: skyblue;
+           position: absolute;
+           top: 20%;
+           img{
+               width: 100%;
+               height: 100%;
+           }
+       }
+       &--detail{
+           position: absolute;
+           top:20%;
+           right: 5%;
+           display: block;
+           word-wrap: break-word;
+           @include mq(){
+               width: 50%;
+           }
+       }
+   }
+   &__price{
+        height: 17%;
+   }
+   &__bottom{
+        height: 13%;
+   }
 }
 
 
 
 
-.c-newOne{//todo
-    width: 30%;
-    height: 240px;
-    float: left;
-    margin: 30px 20px;
-    @include mq(){
-        width: 100%;
-        height: 150px;
-        margin: 0 0 50px 0;
-    }
 
-    &__head, .c-index__one--head{
-        width: 100%;
-        height: 20%;
-        background: black;
-    }
-    &__body{
-        width: 100%;
-        height: 80%;
-        background: skyblue;
-    }
-}
+
+
+
+// .c-index, .c-new{
+//     width: 100%;
+//     height: 700px;
+//     background: white;
+//     box-sizing: border-box;
+//     padding: 30px;
+//     &__one{
+//         width: 100%;
+//         &--img{
+//             height: 70%;
+//             background: gray;
+//         }
+//         &--middle{
+//             height: 17%;
+//             background: white;
+//         }
+//         &--bottom{
+//             height: 13%;
+//         }
+//     }
+// }
+
+
+
+// .c-newOne{//todo
+//     width: 30%;
+//     height: 240px;
+//     float: left;
+//     margin: 30px 20px;
+//     @include mq(){
+//         width: 100%;
+//         height: 150px;
+//         margin: 0 0 50px 0;
+//     }
+
+//     &__head{
+//         width: 100%;
+//         height: 20%;
+//         background: black;
+//     }
+//     &__body{
+//         width: 100%;
+//         height: 80%;
+//         background: skyblue;
+//     }
+// }

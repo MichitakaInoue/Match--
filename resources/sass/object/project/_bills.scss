@@ -23,11 +23,19 @@
 }
 .p-bill__large--one{
     width: 30%;
-    height: 370px;
+    height: 300px;
     margin: 0 15px;
+    @include mq(){
+        width: 99%;
+        margin: 15px auto;
+    }
 }
 .p-bill__small--one{
     width: 22%;
-    height: 270px;
+    height: 240px;
     margin: 0 14px;
+    @include mq(){
+        width: 99%;
+        margin: 15px auto;
+    }
 }

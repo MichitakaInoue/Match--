@@ -20,7 +20,7 @@
         </div>
         <div class="c-article__block  c-article__profile">
             <div class="c-article__profile--name"><h2>inoue michitka</h2></div>
-            <div class="c-article__profile--left"><a href=""><img src="" class="u-img u-img__article" alt=""></a></div>
+            <div><a href=""><img class="c-article__profile--left" src="{{asset('/storage/img/'.$user->pic)}}" class="u-img u-img__article" alt=""></a></div>
             <div class="c-article__profile--right"><p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p></div>
         </div>
         <div class="c-article__block  c-article__block--title">

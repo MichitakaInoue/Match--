@@ -16,7 +16,7 @@
     <section class="c-hero">
     </section>
     <section class="p-jobForm">
-        <form class="c-form" method="POST" action="{{route('Accounts.account')}}">
+        <form class="c-form" method="POST" enctype="multipart/form-data" action="{{route('Accounts.account')}}">
             @csrf
             <div class="">
                 <input style="width: 100%; height:50px; margin-bottom:20px;" name="name"  value="{{$dbName}}" type="text" placeholder="あなたの名前">

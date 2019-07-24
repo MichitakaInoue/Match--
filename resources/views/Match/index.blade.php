@@ -21,19 +21,28 @@
             </ul>
         </nav>
     </section>
+
+
     <div class="p-bills">
-       <section class="p-bill p-bill__large">
+
+       <div class="p-bill p-bill__large">
+           <section class="p-bill__one p-bill__large--one">
+             <div class="c-index">
+               <div class="c-index__main">
+                 <a href=""><img class="c-index__main--img" src="{{ asset('/img/images.jpeg') }}" alt=""></a>
+                 <p  class="c-index__main--detail">wwwwwwwwwwwwwww</p>
+            　 </div>
+               <div class="c-index__price"></div>
+               <div class="c-index__bottom"></div>
+             </div>
+            </section>
            <div class="p-bill__one p-bill__large--one">
-               <div class="c-index__one--head"></div>
-               <div class="c-index__one--img"><a href=""><img src="" alt=""></a></div>
-               <div class="c-index__one--middle"></div>
-               <div class="c-inex__one--bottom"></div>
            </div>
            <div class="p-bill__one p-bill__large--one">
            </div>
-           <div class="p-bill__one p-bill__large--one">
-           </div>
-       </section>
+        </div>
+
+
        <section class="p-bill p-bill__small">
            <div class="p-bill__one p-bill__small--one">
            </div>
@@ -44,5 +53,7 @@
            <div class="p-bill__one p-bill__small--one">
            </div>
        </section>
+
     </div>
+
 @endsection

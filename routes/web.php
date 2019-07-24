@@ -40,6 +40,7 @@ Route::get('/routetop', function(){
 Route::get('/routemypage', function(){
     return view('Match/mypage');
 });
+Route::get('/routemypage', 'ShowMypageController@showMypage');
 
 //案件投稿リンク
 Route::get('/routepost', function(){
