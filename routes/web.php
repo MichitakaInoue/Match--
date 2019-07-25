@@ -59,7 +59,7 @@ Route::get('/routeaccount', 'showAccountsController@showAccount');
 Route::get('/routeindex', function(){
     return view('Match/index');
 });
-
+Route::get('/routeindex', 'ShowBillsController@showBills');
 
 
 
@@ -86,3 +86,7 @@ Route::get('/home', 'HomeController@index')->name('top'); //ログアウトし�
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

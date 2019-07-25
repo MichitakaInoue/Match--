@@ -19,6 +19,7 @@ class CreateBillsTable extends Migration
             $table->Integer('price')->nullable(false);
             $table->string('bill_content');
             $table->string('bill_comment');
+            $table->unsignedBigInteger('user_id');
             $table->Integer('category_id');
             $table->boolean('delte_flg');
             $table->timestamps();
