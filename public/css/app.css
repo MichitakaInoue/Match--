@@ -306,6 +306,7 @@ body {
 }
 
 .c-index__main--detail {
+  width: 13em;
   position: absolute;
   top: 20%;
   right: 5%;
@@ -511,7 +512,7 @@ body {
 .p-bill__large--one {
   width: 30%;
   height: 300px;
-  margin: 0 15px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 414px) {

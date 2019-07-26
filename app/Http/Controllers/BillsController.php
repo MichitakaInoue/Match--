@@ -14,6 +14,7 @@ class BillsController extends Controller
         Log::debug('BillsController: 案件投稿(bills)アクションです');
 
         $user = Auth::user();
+        $u_pic = $user->pic;
 
         Log::debug('BillsController: 案件投稿内容のデータをバリデーションします');
         
@@ -34,6 +35,7 @@ class BillsController extends Controller
         $bill->bill_content = $request->bill_content;
         $bill->bill_comment = $request->bill_comment;
         $bill->user_id = $user->id;
+        $bill->pic = $u_pic;
         $bill->save();
         
         Log::debug('保存したbill: '.print_r($bill, true));

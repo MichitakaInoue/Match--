@@ -21,6 +21,7 @@ class CreateBillsTable extends Migration
             $table->string('bill_comment');
             $table->unsignedBigInteger('user_id');
             $table->Integer('category_id');
+            $table->string('pic');
             $table->boolean('delte_flg');
             $table->timestamps();
             $table->collation = 'utf8mb4_bin';

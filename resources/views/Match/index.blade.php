@@ -26,24 +26,40 @@
     <div class="p-bills">
 
        <div class="p-bill p-bill__large">
-           <section class="p-bill__one p-bill__large--one">
+
+           @foreach ($bill as $key=>$val)      
+              <section class="p-bill__one p-bill__large--one">
+                <div class="c-index">
+                  <div class="c-index__main">
+                    <a href=""><img class="c-index__main--img" src="{{ asset('/storage/img/'.$val->pic) }}" alt=""></a>
+                    <p  class="c-index__main--detail">{{$val->bill_comment}}</p>
+               　 </div>
+                  <div class="c-index__price">{{$val->price}}</div>
+                  <div class="c-index__bottom">♡♡</div>
+                </div>
+               </section>
+           @endforeach
+
+           {{-- <section class="p-bill__one p-bill__large--one">
              <div class="c-index">
                <div class="c-index__main">
                  <a href=""><img class="c-index__main--img" src="{{ asset('') }}" alt=""></a>
                  <p  class="c-index__main--detail">wwwwwwwwwwwwwww</p>
             　 </div>
-               <div class="c-index__price"></div>
-               <div class="c-index__bottom"></div>
+               <div class="c-index__price">4000</div>
+               <div class="c-index__bottom">♡♡</div>
              </div>
-            </section>
-           <div class="p-bill__one p-bill__large--one">
+            </section> --}}
+
+
+           {{-- <div class="p-bill__one p-bill__large--one">
            </div>
            <div class="p-bill__one p-bill__large--one">
-           </div>
+           </div> --}}
         </div>
 
 
-       <section class="p-bill p-bill__small">
+       {{-- <section class="p-bill p-bill__small">
            <div class="p-bill__one p-bill__small--one">
            </div>
            <div class="p-bill__one p-bill__small--one">
@@ -52,7 +68,7 @@
            </div>
            <div class="p-bill__one p-bill__small--one">
            </div>
-       </section>
+       </section> --}}
 
     </div>
 

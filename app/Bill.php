@@ -13,7 +13,7 @@ Log::debug('BillModel: Billのmodelです');
 class Bill extends Model //model　素のphpの場合と全く同じ
 {
     //変更(CRUD)させたいカラムをfillable
-    protected $fillable = ['title', 'price', 'bill_content', 'bill_comment', 'user_id'];
+    protected $fillable = ['title', 'price', 'bill_content', 'bill_comment', 'pic', 'user_id'];
 
     
     //リレーションusersと紐づけている
