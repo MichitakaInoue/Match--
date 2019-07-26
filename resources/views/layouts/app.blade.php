@@ -31,15 +31,17 @@
 
 <body>
     <header id="l-header">
-        <h1><a href="route{{'top'}}">Match</a></h1>
+        <h1><a href="{{route('top')}}">Match</a></h1>
         <nav class=c-nav>
             <ul>
                 @auth
-                <li><a href="route{{'mypage'}}">mypage</a></li>  
-                <li><a href="route{{'account'}}">account</a></li>   
-                <li><a href="route{{'post'}}">post</a></li>
+                {{-- <li><a href="route{{'mypage'}}">mypage</a></li>  だとroutemypageでgetしてくれる --}}
+                {{-- <li><a href="{{route('mypage')}}">mypage</a></li> ではルーティングのnameの値を取る ->name(mypage)とする --}}
+                <li><a href="{{route('mypage')}}">mypage</a></li>  
+                <li><a href="{{route('account')}}">account</a></li>   
+                <li><a href="{{route('Bills.bills')}}">post</a></li>
                 @endauth 
-                <li><a href="route{{'index'}}">jobs</a></li>         
+                <li><a href="{{route('index')}}">jobs</a></li>         
                 @guest
                     <li><a  href="{{ route('login') }}">signin</a></li>
                    @if (Route::has('register'))

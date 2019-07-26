@@ -32,7 +32,7 @@
                 <div class="c-index">
                   <div class="c-index__main">
                     <a href=""><img class="c-index__main--img" src="{{ asset('/storage/img/'.$val->pic) }}" alt=""></a>
-                    <p  class="c-index__main--detail">{{$val->bill_comment}}</p>
+                    <a href="{{route('indexDetail', $val->id)}}"><p class="c-index__main--detail">{{$val->bill_comment}}</p></a>
                　 </div>
                   <div class="c-index__price">{{$val->price}}</div>
                   <div class="c-index__bottom">♡♡</div>
