@@ -9,7 +9,7 @@
 
 
 @section('content')  
-<div class="l-article ">
+<div class="l-article  u-article__chat">
     <div class="p-topbar u-topbar_chat">
      <section class="c-topbar">
          <div><h1>{{$bill->title}}</h1></div>
@@ -27,15 +27,8 @@
     </div>
 
     <div class="p-article  p-article__chat">
-     <section class="c-article">
-         {{-- <div class="c-chatBlock__left">
-        　 <a href="" class="c-chatBlock__left--img  u-imgWrapper u-imgWrapper__chat--article"><img class="c-img__chat" src="{{asset('/storage/img/'.$sale_user->pic)}}" alt=""></a>
-           <div class="c-chatBlock__left--content">
-             <h3>{{$sale_user->name}}</h3>
-             <div></div>
-           </div>
-         </div> --}}
 
+      <section class="c-article">
           <div class="c-chatBlock">
         　 　<a href="" class="c-chatBlock__img u-imgWrapper"><img class="c-img c-img__chat" src="{{asset('/storage/img/'.$sale_user->pic)}}" alt=""></a>
            　<div class="c-chatBlock__contents">
@@ -44,15 +37,20 @@
                <div class="c-chatBlock__contents--time">2:10 AM</div>
           　 </div>
           </div>
-
           <div class="c-chatBlock">
            　<div class="c-chatBlock__myMsg"></div>
           </div>
+          <div class="c-chatForm">
+            <form class="c-form c-chatForm__form" method="POST" action="">
+              <input type="text" class="c-chatForm__form--input">
+              <input type="submit"><i class="fas fa-2x fa-paper-plane"></i>
+            </form>
+          </div>
+      </section>
 
-         <div class="c-chatBlock__right">
-         </div>
-     </section>
-    </div>
+  </div>
+
+
 </div> 
 
 <div class="p-sidebar">
