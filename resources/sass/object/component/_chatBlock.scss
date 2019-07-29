@@ -1,0 +1,65 @@
+.c-chatBlock{
+    width: 49%;
+    overflow: hidden;
+    float: left;
+    display: flex;
+    // border: 1px solid;
+    &__img{//画像サイズの大元
+        width: 80px;
+        height: 80px;
+        // float: left;
+    }
+    &__contents{//相手側のユーザーの名前　チャット内容　送信時刻
+        width: 70%;//%指定
+        // float: left;
+        &--userName{
+            margin-bottom: -20px;
+        }
+        &--msg{
+            width:99%;
+            min-height: 50px;
+            border-radius: 0 10px 10px 10px;
+            border:1px solid;
+        }
+        &--time{
+
+        }
+    }
+    &__myMsg{
+        width: 70%;
+        height: 40px;
+        border: 1px solid;
+        border-radius: 10px;
+        margin-left: 27%;
+    }
+    // &__left, &__right{
+    //     // width: 49%;
+    //     // height: 200px;
+    //     // border: 1px solid;
+    //     // float: left;
+    // }
+    // &__right{
+    //     width: 49%;
+    //     height: 200px;
+    //     border: 1px solid;
+    // }
+    // &__left{
+    //     display: flex;
+    //     &--img{//u-img__chat
+    //         width: 50px;//%指定
+    //         height: 50px;
+    //         border-radius: 150px;
+    //     }
+    //     &--content{
+    //         width: 200px;//%指定
+    //         height: 100px;
+    //         border: 1px solid;
+    //     }
+    // }
+    // &__right{
+    //     width: 49%;
+    //     height: 200px;
+    //     border: 1px solid;
+    // }
+
+}

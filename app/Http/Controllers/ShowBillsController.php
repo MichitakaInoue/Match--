@@ -43,7 +43,7 @@ class ShowBillsController extends Controller
        
 
         
-        Log::debug('案件の詳細データすべて:'.print_r($bill, true));
+        // Log::debug('案件の詳細データすべて:'.print_r($bill, true));
         // [items:protected] => Array
         // (
         //     [0] => stdClass Object

@@ -205,6 +205,10 @@ body {
   position: relative;
 }
 
+.l-article {
+  margin: 20px 0 20px 20px;
+}
+
 .c-nav ul {
   font-size: 18px;
   display: flex;
@@ -328,6 +332,12 @@ body {
   height: 13%;
 }
 
+.c-article {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .c-article__block {
   width: 100%;
   box-sizing: border-box;
@@ -380,6 +390,47 @@ body {
 .c-article__profile--right {
   float: left;
   margin: 40px;
+}
+
+.c-chatBlock {
+  width: 49%;
+  overflow: hidden;
+  float: left;
+  display: flex;
+}
+
+.c-chatBlock__img {
+  width: 80px;
+  height: 80px;
+}
+
+.c-chatBlock__contents {
+  width: 70%;
+}
+
+.c-chatBlock__contents--userName {
+  margin-bottom: -20px;
+}
+
+.c-chatBlock__contents--msg {
+  width: 99%;
+  min-height: 50px;
+  border-radius: 0 10px 10px 10px;
+  border: 1px solid;
+}
+
+.c-chatBlock__myMsg {
+  width: 70%;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-left: 27%;
+}
+
+.c-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
 }
 
 .p-jobForm {
@@ -438,6 +489,13 @@ body {
 }
 
 .p-mypage__sidebar {
+  width: 25%;
+  height: 800px;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.p-sidebar {
   width: 25%;
   height: 800px;
   box-sizing: border-box;
@@ -533,5 +591,47 @@ body {
     width: 99%;
     margin: 15px auto;
   }
+}
+
+.p-article {
+  width: 70%;
+  height: 800px;
+  box-sizing: border-box;
+  padding: 70px;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.p-article__chat {
+  padding: 20px;
+}
+
+.p-topbar {
+  width: 70%;
+  height: 50px;
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.15);
+  background: white;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  padding: 10px 60px;
+}
+
+.c-topbar {
+  line-height: 30px;
+  display: flex;
+}
+
+.c-topbar__right {
+  display: flex;
+}
+
+.c-topbar__right--img {
+  width: 30px;
+  height: 30px;
+  border-radius: 150px;
+}
+
+.u-imgWrapper {
+  display: block;
 }
 

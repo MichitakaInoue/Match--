@@ -24,6 +24,9 @@
 
 ・utilityはcomponentやprojectレイヤで解決することが難しい
 　僅かなスタイル調整のための便利クラス
+  margin padding font-size color 
+  例えば、projectでクラスを2つつけたとして、一方は各画面での共通スタイルとして、もう一方は、utilityで
+  調整用のクラスをつける
 　極力使わないこと
 
 

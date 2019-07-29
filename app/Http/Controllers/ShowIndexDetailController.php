@@ -18,7 +18,11 @@ class ShowIndexDetailController extends Controller
     //ここでは、その案件の情報の詳細を表示する
     //案件idをもとに引っ張り出してくる
 
+    $bill = \App\Bill::find($id);
 
-    return view('Match.indexDetail');
+   //  Log::debug('この案件情報：'.print_r($bill, true));
+   
+
+    return view('Match.indexDetail', ['bill'=>$bill]);
    }
 }

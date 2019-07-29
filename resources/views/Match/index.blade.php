@@ -31,7 +31,7 @@
               <section class="p-bill__one p-bill__large--one">
                 <div class="c-index">
                   <div class="c-index__main">
-                    <a href=""><img class="c-index__main--img" src="{{ asset('/storage/img/'.$val->pic) }}" alt=""></a>
+                    <a href="{{route('accountDetail',$val->user_id)}}"><img class="c-index__main--img" src="{{ asset('/storage/img/'.$val->pic) }}" alt=""></a>
                     <a href="{{route('indexDetail', $val->id)}}"><p class="c-index__main--detail">{{$val->bill_comment}}</p></a>
                　 </div>
                   <div class="c-index__price">{{$val->price}}</div>

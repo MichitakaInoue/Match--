@@ -13,7 +13,8 @@
 
 @section('content')  
    <div class="p-mypage">
-    <section class="p-mypage__main">
+    <div class="p-article">
+      <section>
         <div class="c-article__block  c-article__block--title" style="margin:0;">
             <h3>あなたのプロフィール</h3>
             <p>編集できます</p>
@@ -30,9 +31,13 @@
         <div class="c-article__block  c-article__block--title">
             <h3>最近のメッセージ</h3>
         </div>
-    </section>
-    <section class="p-mypage__sidebar">
+      </section>
+    </div>   
+   
+    <div class="p-sidebar">
+      <section>
 
-    </section>
+      </section>
+    </div>
    </div>
 @endsection
