@@ -42,8 +42,8 @@
           </div>
           <div class="c-chatForm">
             <form class="c-form c-chatForm__form" method="POST" action="">
-              <input type="text" class="c-chatForm__form--input">
-              <input type="submit"><i class="fas fa-2x fa-paper-plane"></i>
+              <input type="text" class="c-chatForm__form--text">
+              <div class="c-chatForm__form--submit"><button type="submit"><i class="fas fa-3x fa-paper-plane"></i></button></div>
             </form>
           </div>
       </section>

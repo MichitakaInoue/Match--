@@ -443,13 +443,34 @@ input {
   line-height: 60px;
 }
 
-.c-chatForm__form--input {
+.c-chatForm__form {
+  overflow: hidden;
+  position: relative;
+}
+
+.c-chatForm__form--text {
   width: 95%;
   min-height: 60px;
   background: #EEEEEE;
   border: none;
   outline: none;
   font-size: 38px;
+}
+
+.c-chatForm__form--submit {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 10%;
+  right: 2%;
+}
+
+.c-chatForm__form--submit button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #EEEEEE;
+  outline: none;
 }
 
 .p-jobForm {
@@ -660,5 +681,6 @@ input {
 
 .fa-paper-plane {
   cursor: pointer;
+  color: gray;
 }
 
